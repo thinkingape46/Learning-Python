@@ -13,15 +13,24 @@ class CardDeck():
         pass
         
     def card (self):
-        '''
-        This method pulls two random cards.
-        '''
         x = 1
         while x < 3:
             suitn = randint(1,4)
             number = randint(1,13)
-            card = print(self.top,self.side*2,self.middlel,f'{number}{self.symdict[suitn]}',self.middler,self.side*2,self.bottom)
-            x += 1
             
-pullcard = CardDeck()
-pullcard.card()
+            if number == 11:
+                card = print(self.top,self.side*2,self.middlel,f'{number}{self.symdict[suitn]}','J',self.middler,self.side*2,self.bottom)
+            
+            elif number == 12:
+                card = print(self.top,self.side*2,self.middlel,f'{number}{self.symdict[suitn]}','Q',self.middler,self.side*2,self.bottom)
+            
+            elif number == 13:
+                card = print(self.top,self.side*2,self.middlel,f'{number}{self.symdict[suitn]}','K',self.middler,self.side*2,self.bottom)
+            
+            else:
+                
+                card = print(self.top,self.side*2,self.middlel,f'{number}{self.symdict[suitn]}',self.middler,self.side*2,self.bottom)
+            x += 1
+
+pull2card = CardDeck()
+pull2card = CardDeck()
